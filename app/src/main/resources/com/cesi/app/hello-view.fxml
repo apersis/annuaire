@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Border?>
+<?import javafx.scene.control.ComboBox?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox onKeyPressed="#keyPressed" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cesi.app.HelloController">
+  <ImageView layoutY="20" fitHeight="100" fitWidth="100">
+    <image>
+      <Image url="@./assets/icon-logo.png"/>
+    </image>
+  </ImageView>
+  <AnchorPane layoutY="0.0" maxWidth="880.0" prefHeight="120.0" style="-fx-border-color: #0070a8; -fx-border-width: 2px;">
+    <BorderPane.margin>
+      <Insets bottom="20.0" top="20.0" left="200.0" right="200.0"/>
+    </BorderPane.margin>
+    <children>
+      <Text text="Recherche" layoutY="20.0" layoutX="10.0"/>
+      <Text text="ID" layoutY="40.0" layoutX="100.0"/>
+      <TextField fx:id="sort_by_id" layoutY="20.0" layoutX="130.0"/>
+      <Text text="Prenom" layoutY="40.0" layoutX="300.0"/>
+      <TextField fx:id="sort_by_prenom" layoutY="20.0" layoutX="350.0"/>
+      <Text text="Nom" layoutY="40.0" layoutX="510.0"/>
+      <TextField fx:id="sort_by_nom" layoutY="20.0" layoutX="550.0"/>
+      <Text text="Ville" layoutY="83.0" layoutX="250.0"/>
+      <ComboBox fx:id="combo_site" layoutY="65" layoutX="280" prefWidth="150">
+        <value>
+          <String fx:value="Site" />
+        </value>
+      </ComboBox>
+      <Text text="Service" layoutY="83.0" layoutX="460.0"/>
+      <ComboBox fx:id="combo_service" layoutY="65" layoutX="500" prefWidth="150">
+        <value>
+          <String fx:value="Service" />
+        </value>
+      </ComboBox>
+      <Button fx:id="envoyer" text="Envoyer" onAction="#onButtonEnvoyerClick" layoutY="45.0" layoutX="750.0"/>
+    </children>
+  </AnchorPane>
+  <TableView fx:id="TableAnnuaire" prefHeight="570.0">
+    <columns>
+      <TableColumn prefWidth="100.0" text="ID Salarie" fx:id="id_salarie"/>
+      <TableColumn prefWidth="75.0" text="Nom" fx:id="nom" />
+      <TableColumn prefWidth="75.0" text="Prenom" fx:id="prenom" />
+      <TableColumn prefWidth="125.0" text="Numero Fixe" fx:id="tel_fixe" />
+      <TableColumn prefWidth="125.0" text="Numero Portable" fx:id="tel_portable" />
+      <TableColumn prefWidth="175.0" text="E-mail" fx:id="email"/>
+      <TableColumn prefWidth="100.0" text="Service" fx:id="libelle_service"/>
+      <TableColumn prefWidth="100.0" text="Ville du Site" fx:id="ville_site"/>
+      <TableColumn prefWidth="100.0" text="Type du Site" fx:id="type_site"/>
+    </columns>
+  </TableView>
+</VBox>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cesi.app.UpdateServiceController"
+            prefHeight="200.0" prefWidth="300.0">
+    <Text text="Modifier un service" layoutY="25" layoutX="95"/>
+    <TextField fx:id="id_service" promptText="ID" layoutY="50" layoutX="75" prefWidth="75"/>
+    <Button text="Rechercher" layoutY="50" layoutX="175" prefWidth="80" onAction="#onClickRechercher"/>
+    <TextField fx:id="libelle" promptText="Libelle" layoutY="90" layoutX="75"/>
+    <Button text="Annuler" layoutY="165" layoutX="50" prefWidth="75" onAction="#onClickAnnuler"/>
+    <Button text="Envoyer" layoutY="165" layoutX="175" prefWidth="75" onAction="#onClickEnvoyer"/>
+
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cesi.app.AddServiceController"
+            prefHeight="200.0" prefWidth="300.0">
+    <Text text="Créer un nouveau service" layoutY="25" layoutX="80"/>
+    <TextField fx:id="libelle" promptText="Libelle" layoutY="55" layoutX="75"/>
+    <Button text="Annuler" layoutY="165" layoutX="50" prefWidth="75" onAction="#onClickAnnuler"/>
+    <Button text="Envoyer" layoutY="165" layoutX="175" prefWidth="75" onAction="#onClickEnvoyer"/>
+</AnchorPane>

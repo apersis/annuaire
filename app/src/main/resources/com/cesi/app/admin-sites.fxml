@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cesi.app.AdminSitesController"
+            prefWidth="200" style="-fx-background-color: #f0f0f0;">
+    <children>
+        <Button text="Salariés" layoutY="100" layoutX="56" prefWidth="100" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickHome"/>
+        <Button text="Sites" layoutY="280" layoutX="56" prefWidth="100" prefHeight="100" style="-fx-background-color: #0070a8; -fx-text-fill: white;"/>
+        <Button text="Services" layoutY="460" layoutX="56" prefWidth="100" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickServices"/>
+        <Button layoutY="600" layoutX="6" prefWidth="200" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickQuitter">
+            <graphic>
+                <ImageView fitHeight="80" fitWidth="80">
+                    <Image url="@./assets/icon-quitter.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Separator orientation="VERTICAL" style="-fx-background-color: #0070a8" prefWidth="4" prefHeight="1280" layoutX="210"/>
+        <Button text="CREATE" layoutY="25" layoutX="462" prefWidth="100" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickCreate"/>
+        <Button text="UPDATE" layoutY="25" layoutX="718" prefWidth="100" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickUpdate"/>
+        <Button text="DELETE" layoutY="25" layoutX="974" prefWidth="100" prefHeight="100" style="-fx-background-color: #f0f0f0; -fx-cursor: hand;" onAction="#onClickDelete"/>
+        <TableView fx:id="TableSites" prefHeight="570.0" prefWidth="1064" layoutX="216" layoutY="150">
+            <columns>
+                <TableColumn prefWidth="100.0" text="ID Site" fx:id="id_site"/>
+                <TableColumn prefWidth="75.0" text="Ville" fx:id="ville" />
+                <TableColumn prefWidth="75.0" text="Type" fx:id="type" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

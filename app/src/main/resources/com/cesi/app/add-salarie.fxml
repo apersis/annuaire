@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.cell.ComboBoxListCell?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cesi.app.AddSalarieController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Text text="Créer un nouveau salarié" layoutY="25" layoutX="235"/>
+    <TextField fx:id="nom" promptText="Nom" layoutY="75" layoutX="125"/>
+    <TextField fx:id="prenom" promptText="Prenom" layoutY="75" layoutX="325"/>
+    <TextField fx:id="email" promptText="E-mail" layoutY="125" layoutX="225" prefWidth="200"/>
+    <TextField fx:id="tel_portable" promptText="Portable" layoutY="175" layoutX="125"/>
+    <TextField fx:id="tel_fixe" promptText="Fixe" layoutY="175" layoutX="325"/>
+    <ComboBox fx:id="combo_site" layoutY="240" layoutX="125" prefWidth="150">
+        <value>
+            <String fx:value="Site" />
+        </value>
+    </ComboBox>
+    <ComboBox fx:id="combo_service" layoutY="240" layoutX="325" prefWidth="150">
+        <value>
+            <String fx:value="Service" />
+        </value>
+    </ComboBox>
+    <Button text="Annuler" layoutY="325" layoutX="150" prefWidth="75" onAction="#onClickAnnuler"/>
+    <Button text="Envoyer" layoutY="325" layoutX="375" prefWidth="75" onAction="#onClickEnvoyer"/>
+</AnchorPane>
